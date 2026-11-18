@@ -51,9 +51,10 @@ Tokens live in `tailwind.config.js`; reusable styles (buttons, cards, eyebrows) 
 
 ## Common edits
 
-- **Client logos:** the client strip and grid currently show names as text. Put logo files in
-  `public/assets/logos/` and swap each name for an `<img>` (instructions are in `src/partials/clients.html`).
+- **Client & partner logos:** transparent PNGs live in `public/assets/logos/`. The scrolling strip is
+  `src/partials/clients.html`; the grids are on the Industries and About pages. To add a logo, drop the file in
+  and copy one of the existing `<li>` lines.
 - **Contact form:** by default it opens the visitor's email app addressed to info@standpointng.com.
   To receive submissions directly, add `data-endpoint="https://…"` (e.g. Formspree or a Cloudflare Pages Function)
   to the `<form>` in `src/pages/contact.html`.
-- **Numbers and claims:** stats appear on the Home, About, Services and Industries pages. Search for `150,000` or `data-count` to update them.
+- **Numbers and claims:** stats appear on the Home, About, Services and Industries pages. Search for `250,000`, `150,000` or `data-count` to update them.
