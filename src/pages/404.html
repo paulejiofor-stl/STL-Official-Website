@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- @include head title="Page not found | Standpoint Technology" desc="The page you were looking for could not be found." -->
+  <meta name="robots" content="noindex">
+</head>
+<body data-page="404">
+<!-- @include header -->
+<main id="main" class="relative isolate flex min-h-[80vh] items-center overflow-hidden pt-[72px]">
+  <div class="grid-bg absolute inset-0 -z-10"></div>
+  <div class="container py-24 text-center">
+    <img src="{{root}}assets/brand/standpoint-icon-fullcolour-on-light.svg" alt="" class="mx-auto h-16 w-auto">
+    <p class="mt-8 font-display text-sm font-semibold text-pink">Error 404</p>
+    <h1 class="h-display mt-4">This page has moved.</h1>
+    <p class="lead mx-auto mt-5 max-w-lg">The page you’re looking for doesn’t exist or has a new address.</p>
+    <div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+      <a href="{{link:home}}" class="btn-primary">Back to home</a>
+      <a href="{{link:contact}}" class="btn-secondary">Contact us</a>
+    </div>
+  </div>
+</main>
+<!-- @include footer -->
+</body>
+</html>

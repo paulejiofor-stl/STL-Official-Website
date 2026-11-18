@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Self-hosted fonts (SIL Open Font License) — Inter is the brand typeface; Inter Tight is its display cut */
+  @font-face { font-family: "Inter"; font-style: normal; font-weight: 100 900; font-display: swap; src: url("../fonts/inter-var.woff2") format("woff2"); }
+  @font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 100 900; font-display: swap; src: url("../fonts/inter-tight-var.woff2") format("woff2"); }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { @apply bg-white font-sans text-slate antialiased; font-feature-settings: "cv11", "ss01"; }
+  h1, h2, h3, h4 { @apply font-display text-navy; letter-spacing: -0.03em; text-wrap: balance; }
+  p { text-wrap: pretty; }
+  ::selection { background: #F5DF6F; color: #00163B; }
+  :focus-visible { outline: 2px solid #C84092; outline-offset: 3px; border-radius: 6px; }
+  [id] { scroll-margin-top: 6rem; }
+}
+
+@layer components {
+  /* Buttons */
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-[15px] font-semibold transition duration-200 ease-out will-change-transform; }
+  .btn svg { @apply h-4 w-4 transition-transform duration-200; }
+  .btn:hover svg { transform: translateX(3px); }
+  .btn-primary { @apply btn bg-navy text-white shadow-[0_1px_0_rgba(255,255,255,.12)_inset,0_8px_20px_-8px_rgba(0,35,85,.55)] hover:bg-midnight hover:-translate-y-px; }
+  .btn-secondary { @apply btn border border-line bg-white text-navy hover:border-navy/30 hover:-translate-y-px; }
+  .btn-signal { @apply btn bg-signal text-midnight hover:bg-[#f8e78f] hover:-translate-y-px; }
+  .btn-glass { @apply btn border border-white/20 bg-white/5 text-white backdrop-blur hover:bg-white/10; }
+
+  /* Small label above headings, with the brand's pink hex dot */
+  .eyebrow { @apply inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.14em] text-slate-600; }
+  .eyebrow::before { content: ""; @apply h-2 w-2 bg-pink; clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0 50%); }
+  .eyebrow-dark { @apply eyebrow text-white/70; }
+
+  .section { @apply py-20 sm:py-24 lg:py-32; }
+  .h-display { @apply font-display font-extrabold tracking-tightest text-[2.6rem] leading-[1.02] sm:text-6xl lg:text-[3.6rem] xl:text-[4.1rem]; }
+  .h-section { @apply font-display font-bold tracking-tight text-[2rem] leading-[1.08] sm:text-[2.75rem] lg:text-5xl; letter-spacing: -0.035em; }
+  .lead { @apply text-lg leading-relaxed text-slate-600 sm:text-xl; }
+
+  /* Cards */
+  .card { @apply relative overflow-hidden rounded-2xl border border-line bg-white p-7 shadow-card transition duration-300; }
+  .card-hover { @apply hover:-translate-y-1 hover:shadow-lift hover:border-navy/15; }
+  /* Spotlight that follows the cursor (set by main.js) */
+  .spotlight::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .3s;
+    background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(245,223,111,.18), transparent 45%);
+  }
+  .spotlight:hover::after { opacity: 1; }
+
+  /* Hexagon icon tile — echoes the Hive Duo logo */
+  .hex { clip-path: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0 50%); }
+  .icon-tile { @apply hex flex h-12 w-[3.4rem] items-center justify-center bg-mist text-navy; }
+  .icon-tile svg { @apply h-[22px] w-[22px]; }
+
+  .check-list li { @apply relative pl-7; }
+  .check-list li::before {
+    content: ""; @apply absolute left-0 top-[0.55em] h-[9px] w-[11px] bg-signal;
+    clip-path: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0 50%);
+    box-shadow: inset 0 0 0 1px rgba(0,35,85,.15);
+  }
+  .check-list-dark li::before { @apply bg-signal; }
+
+  .divider-pink { @apply h-px w-12 bg-pink; }
+
+  .chip { @apply inline-flex items-center rounded-full border border-line bg-white px-3 py-1 text-xs font-medium text-slate-600; }
+  .chip-dark { @apply inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-white/80; }
+
+  /* Form fields */
+  .field { @apply block w-full rounded-xl border border-line bg-white px-4 py-3 text-[15px] text-navy placeholder:text-slate-400 transition focus:border-navy focus:outline-none focus:ring-4 focus:ring-navy/10; }
+  .select-field { @apply appearance-none bg-no-repeat pr-10; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23183D56' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-size: 18px; background-position: right 1rem center; }
+  .label { @apply mb-1.5 block text-sm font-medium text-navy; }
+
+  /* Header states */
+  .site-header { @apply fixed inset-x-0 top-0 z-50 transition-all duration-300; }
+  .site-header.is-scrolled { @apply border-b border-line/80 bg-white/75 backdrop-blur-xl; }
+  .nav-link { @apply relative rounded-lg px-3 py-2 text-[15px] font-medium text-slate-600 transition hover:text-navy; }
+  .nav-link[aria-current="page"] { @apply text-navy; }
+  .nav-link[aria-current="page"]::after { content: ""; @apply absolute bottom-0.5 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-pink; }
+
+  /* Services page side menu */
+  .toc-link { @apply -ml-px block border-l-2 border-transparent py-2 pl-5 text-[15px] text-slate-600 transition hover:text-navy; }
+  .toc-link[aria-current] { @apply border-pink font-semibold text-navy; }
+
+  /* Hero grid backdrop */
+  .grid-bg {
+    background-image: linear-gradient(to right, rgba(0,35,85,.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,35,85,.06) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, #000 40%, transparent 75%);
+  }
+  .grid-bg-dark {
+    background-image: linear-gradient(to right, rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, #000 30%, transparent 75%);
+  }
+
+  /* Client logo marquee */
+  .marquee { mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent); }
+  .marquee-track { @apply flex w-max items-center gap-14; animation: marquee 40s linear infinite; }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+  .wordmark { @apply whitespace-nowrap font-display text-2xl font-bold tracking-tight text-slate-400 transition hover:text-navy; }
+}
+
+@layer utilities {
+  .text-gradient { background: linear-gradient(100deg, #002355 10%, #3A5568 90%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .text-signal-gradient { background: linear-gradient(100deg, #F5DF6F, #fff3b8); -webkit-background-clip: text; background-clip: text; color: transparent; }
+}
+
+/* Scroll reveal (only when JS is running, so content is never hidden without it) */
+.js [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0s); }
+.js [data-reveal].is-visible { opacity: 1; transform: none; }
+
+@keyframes marquee { to { transform: translateX(-50%); } }
+@keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+.floaty { animation: floaty 6s ease-in-out infinite; }
+@keyframes pulse-dot { 0% { box-shadow: 0 0 0 0 rgba(200,64,146,.5); } 70% { box-shadow: 0 0 0 10px rgba(200,64,146,0); } 100% { box-shadow: 0 0 0 0 rgba(200,64,146,0); } }
+.pulse-dot { animation: pulse-dot 2.2s infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+  .js [data-reveal] { opacity: 1; transform: none; }
+}

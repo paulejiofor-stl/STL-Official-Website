@@ -1,0 +1,14 @@
+{
+  "name": "stl-official-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Standpoint Technology official website",
+  "scripts": {
+    "build": "node scripts/build.mjs && tailwindcss -i src/css/main.css -o dist/assets/css/main.css --minify",
+    "build:preview": "node scripts/build.mjs --preview && tailwindcss -i src/css/main.css -o dist/assets/css/main.css --minify",
+    "dev": "node scripts/build.mjs && tailwindcss -i src/css/main.css -o dist/assets/css/main.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

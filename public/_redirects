@@ -1,0 +1,13 @@
+# Old standpointng.com (WordPress) addresses -> new pages
+/about-us        /about/          301
+/about-us/       /about/          301
+/contact-us      /contact/        301
+/contact-us/     /contact/        301
+/service-point   /servicepoint/   301
+/service-point/  /servicepoint/   301
+/feed            /                301
+/feed/           /                301
+# Draft (Dorik) addresses -> new pages
+/solutions_and_services   /services/     301
+/clients_and_industires   /industries/   301
+/ServicePoint             /servicepoint/ 301
