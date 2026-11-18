@@ -1,0 +1,10 @@
+// Cloudflare Workers settings: serve the built site in dist/ as static files.
+{
+  "name": "stl-official-website",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}
