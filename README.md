@@ -28,10 +28,10 @@ npm run dev       # rebuilds CSS on save (re-run build after changing pages or p
 
 Open `dist/index.html` in a browser, or serve the folder: `npx serve dist`.
 
-## Deploy (Cloudflare Pages)
+## Deploy (Cloudflare Workers)
 
 - Build command: `npm run build`
-- Output directory: `dist`
+- Deploy command: `npx wrangler deploy` (settings are in `wrangler.jsonc`, which serves the `dist/` folder)
 - `public/_redirects` sends old WordPress and Dorik addresses (e.g. `/about-us/`, `/clients_and_industires`) to the new pages.
 
 ## Brand
