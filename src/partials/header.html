@@ -1,0 +1,35 @@
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-navy focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
+<header class="site-header">
+  <div class="container flex h-[72px] items-center justify-between gap-6">
+    <a href="{{link:home}}" class="shrink-0" aria-label="Standpoint Technology — home">
+      <img src="{{root}}assets/brand/standpoint-logo-fullcolour-on-light.svg" alt="Standpoint Technology" width="178" height="30" class="h-[26px] w-auto sm:h-[30px]">
+    </a>
+    <nav class="hidden items-center gap-1 lg:flex" aria-label="Main">
+      <a class="nav-link" data-nav="services" href="{{link:services}}">Services</a>
+      <a class="nav-link" data-nav="industries" href="{{link:industries}}">Industries &amp; Clients</a>
+      <a class="nav-link" data-nav="servicepoint" href="{{link:servicepoint}}">ServicePoint</a>
+      <a class="nav-link" data-nav="about" href="{{link:about}}">About</a>
+      <a class="nav-link" data-nav="contact" href="{{link:contact}}">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="tel:+2342014544012" class="hidden text-sm font-medium text-slate-600 transition hover:text-navy xl:inline">+234 201 454 4012</a>
+      <a href="{{link:contact}}" class="btn-primary hidden !py-2.5 sm:inline-flex">Talk to our team</a>
+      <button type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-line bg-white/80 text-navy lg:hidden" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <svg data-icon-open class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <svg data-icon-close class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" data-menu class="hidden h-[calc(100dvh-72px)] overflow-y-auto border-t border-line bg-white lg:hidden">
+    <nav class="container flex flex-col py-6" aria-label="Mobile">
+      <a class="border-b border-line py-4 font-display text-2xl font-bold text-navy" data-nav="home" href="{{link:home}}">Home</a>
+      <a class="border-b border-line py-4 font-display text-2xl font-bold text-navy" data-nav="services" href="{{link:services}}">Services</a>
+      <a class="border-b border-line py-4 font-display text-2xl font-bold text-navy" data-nav="industries" href="{{link:industries}}">Industries &amp; Clients</a>
+      <a class="border-b border-line py-4 font-display text-2xl font-bold text-navy" data-nav="servicepoint" href="{{link:servicepoint}}">ServicePoint</a>
+      <a class="border-b border-line py-4 font-display text-2xl font-bold text-navy" data-nav="about" href="{{link:about}}">About</a>
+      <a class="border-b border-line py-4 font-display text-2xl font-bold text-navy" data-nav="contact" href="{{link:contact}}">Contact</a>
+      <a href="{{link:contact}}" class="btn-primary mt-8">Talk to our team</a>
+      <a href="tel:+2342014544012" class="btn-secondary mt-3">Call +234 201 454 4012</a>
+    </nav>
+  </div>
+</header>

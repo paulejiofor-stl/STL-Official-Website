@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- @include head title="Contact Standpoint Technology — Lagos, Nigeria" desc="Talk to Standpoint Technology about IT infrastructure, managed services, sourcing, business email or AI adoption. Call +234 201 454 4012 or email info@standpointng.com." -->
+</head>
+<body data-page="contact">
+<!-- @include header -->
+
+<main id="main">
+  <section class="relative isolate overflow-hidden pt-[72px]">
+    <div class="grid-bg absolute inset-0 -z-10"></div>
+    <div class="absolute -right-32 top-10 -z-10 h-[28rem] w-[28rem] rounded-full bg-signal/20 blur-[120px]"></div>
+    <div class="container grid gap-14 pb-24 pt-16 sm:pt-24 lg:grid-cols-12 lg:gap-16">
+      <div class="lg:col-span-5">
+        <span class="eyebrow" data-reveal>Contact</span>
+        <h1 class="h-display mt-6" data-reveal style="--d:.05s">Let’s get in touch.</h1>
+        <p class="lead mt-6" data-reveal style="--d:.1s">Tell us about your environment and goals. A member of our team will get back to you shortly.</p>
+
+        <div class="mt-10 space-y-3" data-reveal style="--d:.15s">
+          <a href="tel:+2342014544012" class="card card-hover group flex items-center gap-4 !p-5">
+            <div class="icon-tile shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg></div>
+            <div><p class="text-sm text-slate-400">Call us</p><p class="font-display text-lg font-bold text-navy">+234 201 454 4012</p></div>
+          </a>
+          <a href="mailto:info@standpointng.com" class="card card-hover group flex items-center gap-4 !p-5">
+            <div class="icon-tile shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6 8.5-6"/></svg></div>
+            <div><p class="text-sm text-slate-400">Email us</p><p class="font-display text-lg font-bold text-navy">info@standpointng.com</p></div>
+          </a>
+          <a href="https://maps.google.com/?q=Sura+Complex+Simpson+Street+Lagos+Island" target="_blank" rel="noopener" class="card card-hover group flex items-center gap-4 !p-5">
+            <div class="icon-tile shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+            <div><p class="text-sm text-slate-400">Visit our head office</p><p class="font-medium leading-snug text-navy">Block A2-6, Suite 254, Sura Complex, Simpson Street, Lagos Island, Lagos</p></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7" data-reveal style="--d:.1s">
+        <!-- Add data-endpoint="https://..." to send submissions to a form service instead of opening email. -->
+        <form data-contact-form class="rounded-[28px] border border-line bg-white/90 p-7 shadow-lift backdrop-blur sm:p-10" novalidate>
+          <h2 class="font-display text-2xl font-bold">Send us a message</h2>
+          <div class="mt-8 grid gap-5 sm:grid-cols-2">
+            <div><label for="name" class="label">Full name</label><input id="name" name="name" type="text" autocomplete="name" required class="field" placeholder="Ada Okafor"></div>
+            <div><label for="company" class="label">Company</label><input id="company" name="company" type="text" autocomplete="organization" class="field" placeholder="Company name"></div>
+            <div><label for="email" class="label">Work email</label><input id="email" name="email" type="email" autocomplete="email" required class="field" placeholder="you@company.com"></div>
+            <div><label for="phone" class="label">Phone <span class="font-normal text-slate-400">(optional)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" class="field" placeholder="+234"></div>
+            <div class="sm:col-span-2">
+              <label for="interest" class="label">I’m interested in</label>
+              <select id="interest" name="interest" class="field select-field">
+                <option>General enquiry</option>
+                <option>IT Infrastructure &amp; Hardware Support</option>
+                <option>Managed Services</option>
+                <option>Device &amp; SIM Bundling</option>
+                <option>Business Email</option>
+                <option>Business Email - Basic</option>
+                <option>Business Email - Pro</option>
+                <option>Business Email - Enterprise</option>
+                <option>Technology Sourcing &amp; Procurement</option>
+                <option>AI Adoption</option>
+                <option>ServicePoint repair</option>
+              </select>
+            </div>
+            <div class="sm:col-span-2"><label for="message" class="label">How can we help?</label><textarea id="message" name="message" rows="5" required class="field resize-y" placeholder="Tell us about your devices, locations, timelines or the challenge you’re solving."></textarea></div>
+            <div class="hidden" aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
+          </div>
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <p class="text-sm text-slate-400">Prefer to talk? Call +234 201 454 4012.</p>
+            <button type="submit" class="btn-primary">Send message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          </div>
+          <p data-status role="status" aria-live="polite" class="mt-4 text-sm font-medium text-navy"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- @include footer -->
+</body>
+</html>
