@@ -75,6 +75,14 @@
   .nav-link[aria-current="page"] { @apply text-navy; }
   .nav-link[aria-current="page"]::after { content: ""; @apply absolute bottom-0.5 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-pink; }
 
+  /* Long-form legal text (Privacy Policy) */
+  .legal { @apply text-[16px] leading-relaxed text-slate-600; }
+  .legal h2 { @apply mt-12 scroll-mt-28 font-display text-2xl font-bold text-navy; }
+  .legal p { @apply mt-4; }
+  .legal ul { @apply check-list mt-4 space-y-2.5; }
+  .legal strong { @apply font-semibold text-navy; }
+  .legal a { @apply font-medium text-navy underline decoration-pink/50 underline-offset-2 transition hover:decoration-pink; }
+
   /* Services page side menu */
   .toc-link { @apply -ml-px block border-l-2 border-transparent py-2 pl-5 text-[15px] text-slate-600 transition hover:text-navy; }
   .toc-link[aria-current] { @apply border-pink font-semibold text-navy; }
