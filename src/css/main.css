@@ -111,6 +111,78 @@
   .text-signal-gradient { background: linear-gradient(100deg, #F5DF6F, #fff3b8); -webkit-background-clip: text; background-clip: text; color: transparent; }
 }
 
+
+/* ==========================================================================
+   Dark theme (home page): <body class="theme-dark">
+   Brand darks only — Midnight #00163B base, Navy #002355 / Slate #183D56 glows,
+   Signal Yellow highlights, Pink micro-accents.
+   ========================================================================== */
+.theme-dark {
+  background-color: #00163B;
+  background-image:
+    radial-gradient(1200px 700px at 85% -5%, rgba(24, 61, 86, .85), transparent 60%),
+    radial-gradient(900px 600px at -10% 25%, rgba(0, 35, 85, .9), transparent 60%),
+    radial-gradient(700px 500px at 90% 55%, rgba(0, 35, 85, .7), transparent 65%),
+    radial-gradient(800px 500px at 10% 90%, rgba(24, 61, 86, .55), transparent 65%),
+    linear-gradient(180deg, #00163B 0%, #001233 100%);
+  background-attachment: fixed;
+  color: rgba(255,255,255,.72);
+}
+.theme-dark ::selection { background: #F5DF6F; color: #00163B; }
+.theme-dark .logo-on-light { display: none; }
+.theme-dark .logo-on-dark { display: block; }
+
+/* Text */
+.theme-dark h1, .theme-dark h2, .theme-dark h3, .theme-dark h4,
+.theme-dark .text-navy, .theme-dark .text-slate { color: #fff; }
+.theme-dark .text-slate-600, .theme-dark .lead { color: rgba(255,255,255,.68); }
+.theme-dark .text-slate-400 { color: rgba(255,255,255,.45); }
+.theme-dark .text-gradient { background: linear-gradient(100deg, #F5DF6F 0%, #fff3b8 55%, #ffffff 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.theme-dark .eyebrow { color: rgba(255,255,255,.65); }
+
+/* Surfaces */
+.theme-dark .bg-white, .theme-dark .bg-white\/70, .theme-dark .bg-white\/80, .theme-dark .bg-white\/75 { background-color: rgba(255,255,255,.04); }
+.theme-dark .bg-mist, .theme-dark .bg-mist\/60 { background-color: rgba(0, 10, 30, .35); }
+.theme-dark .border-line, .theme-dark .border-y { border-color: rgba(255,255,255,.09); }
+.theme-dark .card { background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.025)); border-color: rgba(255,255,255,.09); box-shadow: 0 1px 0 rgba(255,255,255,.05) inset, 0 20px 40px -24px rgba(0,0,0,.6); backdrop-filter: blur(6px); }
+.theme-dark .card-hover:hover { border-color: rgba(245,223,111,.35); box-shadow: 0 1px 0 rgba(255,255,255,.06) inset, 0 30px 60px -28px rgba(0,0,0,.8); }
+.theme-dark .spotlight::after { background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(245,223,111,.12), transparent 45%); }
+.theme-dark .icon-tile { background: rgba(245,223,111,.12); color: #F5DF6F; }
+.theme-dark .chip { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.14); color: rgba(255,255,255,.8); }
+.theme-dark .shadow-card { box-shadow: 0 20px 40px -24px rgba(0,0,0,.6); }
+.theme-dark .shadow-lift { box-shadow: 0 30px 70px -30px rgba(0,0,0,.85); }
+.theme-dark .grid-bg { background-image: linear-gradient(to right, rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.045) 1px, transparent 1px); }
+.theme-dark .check-list li::before { box-shadow: none; }
+.theme-dark .bg-midnight { background-color: rgba(0, 12, 34, .6); }
+.theme-dark .bg-midnight.rounded-2xl, .theme-dark a.bg-midnight { background: linear-gradient(160deg, #002355 0%, #00163B 70%); border: 1px solid rgba(255,255,255,.08); }
+
+/* Buttons */
+.theme-dark .btn-primary { background: #F5DF6F; color: #00163B; box-shadow: 0 10px 30px -10px rgba(245,223,111,.45); }
+.theme-dark .btn-primary:hover { background: #f8e78f; }
+.theme-dark .btn-secondary { background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.18); color: #fff; }
+.theme-dark .btn-secondary:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.3); }
+
+/* Header */
+.theme-dark .nav-link { color: rgba(255,255,255,.72); }
+.theme-dark .nav-link:hover, .theme-dark .nav-link[aria-current="page"] { color: #fff; }
+.theme-dark .site-header.is-scrolled { background: rgba(0, 22, 59, .72); border-color: rgba(255,255,255,.08); }
+.theme-dark .site-header .bg-white { background: #00163B; }
+.theme-dark [data-menu] { background: #00163B; border-color: rgba(255,255,255,.08); }
+.theme-dark [data-menu] a { border-color: rgba(255,255,255,.08); }
+.theme-dark [data-menu-toggle] { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.15); color: #fff; }
+
+/* Client logos: white silhouettes, full colour on hover */
+.theme-dark .marquee img { filter: brightness(0) invert(1); opacity: .55; }
+.theme-dark .marquee img:hover { filter: none; opacity: 1; }
+.theme-dark .marquee img.keep-colour { filter: none; opacity: .8; }
+.theme-dark .floaty { background: rgba(0, 22, 59, .78); border-color: rgba(255,255,255,.14); }
+.theme-dark .solid-panel { background: #00163B; border-color: rgba(255,255,255,.12); }
+
+/* Footer */
+.theme-dark footer { background: transparent; }
+.theme-dark footer a.border-line, .theme-dark footer .border-line { border-color: rgba(255,255,255,.12); }
+.theme-dark footer a:hover { color: #fff; }
+
 /* Scroll reveal (only when JS is running, so content is never hidden without it) */
 .js [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0s); }
 .js [data-reveal].is-visible { opacity: 1; transform: none; }

@@ -36,7 +36,7 @@ Open `dist/index.html` in a browser, or serve the folder: `npx serve dist`.
 
 ## Brand
 
-Colours, logo files and fonts come from the official Standpoint brand kit (logo 05b, "Hive Duo").
+Colours, logo files and fonts come from the official Standpoint brand kit (logo 05a, "Hive Duo").
 
 | Token | Hex | Use |
 |---|---|---|
