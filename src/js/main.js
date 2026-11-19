@@ -1,4 +1,4 @@
-// Standpoint Technology — site interactions (no dependencies)
+// Standpoint Technology: site interactions (no dependencies)
 (() => {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -93,7 +93,7 @@
     map.forEach((_, id) => { const s = document.getElementById(id); if (s) sio.observe(s); });
   }
 
-  // Contact form: no server needed — opens the visitor's email app with the details filled in.
+  // Contact form: no server needed. It opens the visitor's email app with the details filled in.
   // To collect submissions on a server instead, set data-endpoint on the form (e.g. a Formspree
   // or Cloudflare Pages Function URL) and the form will POST there.
   const form = document.querySelector('[data-contact-form]');
@@ -113,13 +113,13 @@
           const res = await fetch(endpoint, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) });
           if (!res.ok) throw new Error();
           form.reset();
-          status.textContent = 'Thank you — your message has been sent. Our team will be in touch shortly.';
+          status.textContent = 'Thank you. Your message has been sent. Our team will be in touch shortly.';
         } catch {
           status.textContent = 'Something went wrong. Please email info@standpointng.com or call +234 201 454 4012.';
         }
         return;
       }
-      const subject = `Website enquiry: ${d.interest || 'General'} — ${d.company || d.name}`;
+      const subject = `Website enquiry: ${d.interest || 'General'} | ${d.company || d.name}`;
       const body = [
         `Name: ${d.name}`, `Company: ${d.company || '-'}`, `Email: ${d.email}`, `Phone: ${d.phone || '-'}`,
         `Interested in: ${d.interest || '-'}`, '', d.message,

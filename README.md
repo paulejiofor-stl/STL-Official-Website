@@ -1,4 +1,4 @@
-# Standpoint Technology — Official Website
+# Standpoint Technology | Official Website
 
 The marketing website for Standpoint Technology Limited (standpointng.com).
 Plain HTML, Tailwind CSS and a little vanilla JavaScript. No framework, no database.
