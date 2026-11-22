@@ -153,6 +153,24 @@
 .theme-dark .shadow-lift { box-shadow: 0 30px 70px -30px rgba(0,0,0,.85); }
 .theme-dark .grid-bg { background-image: linear-gradient(to right, rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.045) 1px, transparent 1px); }
 .theme-dark .check-list li::before { box-shadow: none; }
+/* Honeycomb (from the brand watermark) replaces the square grid on dark pages.
+   Strongest bottom-right, fading towards the top-left so text stays clear. */
+.theme-dark .grid-bg {
+  background-image: url("../img/honeycomb-dark.svg");
+  background-size: 116.64px 67.36px;
+  background-position: right bottom;
+  mask-image: radial-gradient(ellipse 95% 120% at 100% 100%, #000 20%, rgba(0,0,0,.45) 50%, transparent 78%);
+  -webkit-mask-image: radial-gradient(ellipse 95% 120% at 100% 100%, #000 20%, rgba(0,0,0,.45) 50%, transparent 78%);
+  opacity: .9;
+}
+.theme-dark .cta-lines { display: none; }
+.theme-dark .grid-bg-dark {
+  background-image: url("../img/honeycomb-dark.svg");
+  background-size: 116.64px 67.36px;
+  background-position: center;
+  mask-image: radial-gradient(ellipse 70% 90% at 50% 100%, #000 20%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 90% at 50% 100%, #000 20%, transparent 75%);
+}
 .theme-dark .bg-midnight { background-color: rgba(0, 12, 34, .6); }
 .theme-dark .bg-midnight.rounded-2xl, .theme-dark a.bg-midnight { background: linear-gradient(160deg, #002355 0%, #00163B 70%); border: 1px solid rgba(255,255,255,.08); }
 
