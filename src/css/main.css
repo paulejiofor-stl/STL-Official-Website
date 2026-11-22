@@ -163,14 +163,7 @@
   -webkit-mask-image: radial-gradient(ellipse 95% 120% at 100% 100%, #000 20%, rgba(0,0,0,.45) 50%, transparent 78%);
   opacity: .9;
 }
-.theme-dark .cta-lines { display: none; }
-.theme-dark .grid-bg-dark {
-  background-image: url("../img/honeycomb-dark.svg");
-  background-size: 116.64px 67.36px;
-  background-position: center;
-  mask-image: radial-gradient(ellipse 70% 90% at 50% 100%, #000 20%, transparent 75%);
-  -webkit-mask-image: radial-gradient(ellipse 70% 90% at 50% 100%, #000 20%, transparent 75%);
-}
+
 .theme-dark .bg-midnight { background-color: rgba(0, 12, 34, .6); }
 .theme-dark .bg-midnight.rounded-2xl, .theme-dark a.bg-midnight { background: linear-gradient(160deg, #002355 0%, #00163B 70%); border: 1px solid rgba(255,255,255,.08); }
 
